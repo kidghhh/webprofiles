@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #b74b4b;
+    cursor: pointer;
+    transition: 0.5s ease;
+    background-image: linear-gradient(45deg, #b74b4b, #ff7e5f, #feb47b, #86a8e7, #91eae4, #ffff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    background-position: 100%;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover, nav a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+/* Typing Text */
+.typing-text {
+    font-size: 3.4rem;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header nav a {
+        font-size: 1.6rem;
+        margin-left: 2rem;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .home .home-img img {
+        width: 250px;
+    }
+
+    .home-content h1 {
+        font-size: 3rem;
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+    }
+
+    footer {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .social-icons a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    footer {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home-content h1 {
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.home-content h3 {
+    animation: fadeInUp 1.8s ease-out;
+    animation-delay: 0.5s;
+}
+
+/* การจัดระเบียบพื้นฐานสำหรับใบเซอร์ */
+.certificates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* จัดใบเซอร์ให้มีระเบียบ */
+    gap: 20px;
+    padding: 20px;
+    margin-top: 120px;
+}
+
+/* ใบเซอร์แนวตั้ง */
+.certificate.vertical {
+    width: 500px;
+    height: 700px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* รูปภาพในใบเซอร์แนวตั้ง */
+.certificate.vertical img {
+    width: 100%;  /* รูปภาพเต็มกรอบ */
+    height: 100%;
+    object-fit: cover;  /* ครอบรูปให้เข้ากับกรอบ */
+    display: flex;
+}
+
+/* การตั้งค่าเมื่อ hover ที่ใบเซอร์ */
+.certificate.vertical:hover {
+    transform: scale(1.05); /* ขยายเล็กน้อย */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive: ปรับขนาดให้เหมาะสมสำหรับมือถือและจอขนาดเล็ก */
+@media (max-width: 1024px) {
+    .certificate.vertical {
+        width: 350px;  /* ลดขนาดให้เล็กลง */
+        height: 650px;
+    }
+}
+
+@media (max-width: 768px) {
+    .certificate.vertical {
+        width: 80%;  /* ใช้ความกว้าง 80% ของหน้าจอ */
+        height: auto; /* ปรับความสูงเป็นอัตโนมัติ */
+    }
+
+    /* ปรับข้อความให้เล็กลงเพื่อรองรับหน้าจอที่แคบกว่า */
+    .certificate p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificate.vertical {
+        width: 90%;  /* ใช้ความกว้าง 90% บนจอที่เล็กที่สุด */
+        height: auto; /* ปรับความสูงเป็นอัตโนมัติ */
+    }
+
+    /* ลดขนาดของข้อความให้พอดีกับจอเล็ก */
+    .certificate p {
+        font-size: 0.9rem;
+    }
+}
+/* ใบเซอร์แนวนอน */
+.certificate.horizontal {
+    width: 700px; /* ความกว้างของใบเซอร์แนวนอน */
+    height: 500px; /* ความสูงของใบเซอร์แนวนอน */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* รูปภาพในใบเซอร์แนวนอน */
+.certificate.horizontal img {
+    width: 100%;
+    height: 100%;
+}
+
+/* การตั้งค่าเมื่อ hover ที่ใบเซอร์ */
+.certificate.horizontal:hover {
+    transform: scale(1.05); /* ขยายเล็กน้อย */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive: ปรับขนาดให้เหมาะสมสำหรับมือถือและจอขนาดเล็ก */
+@media (max-width: 1024px) {
+    .certificate.horizontal {
+        width: 500px;  /* ปรับขนาดให้เหมาะสมกับจอขนาดกลาง */
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .certificate.horizontal {
+        width: 80%;  /* ใช้ความกว้าง 80% ของหน้าจอ */
+        height: auto;  /* ปรับความสูงให้ยืดตามรูปภาพ */
+    }
+
+    /* ปรับขนาดข้อความให้เหมาะสม */
+    .certificate p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificate.horizontal {
+        width: 90%;  /* ใช้ความกว้าง 90% บนจอที่เล็กที่สุด */
+        height: auto;
+    }
+
+    /* ลดขนาดของข้อความให้พอดีกับจอเล็ก */
+    .certificate p {
+        font-size: 0.9rem;
+    }
+}
