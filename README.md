@@ -1,2 +1,1 @@
-# kid
 # webprofiles
