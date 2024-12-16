@@ -25,15 +25,25 @@ body{
 /* Text Elements */
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
+<<<<<<< HEAD
     color: #4bfd71;
+=======
+    color: #43da64;
+>>>>>>> 3173611 (Resolve merge conflicts)
     font-weight: 600;
  }
  
  p {
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
+<<<<<<< HEAD
     line-height: 1.6;
     text-shadow: #feb47b;
+=======
+    line-height: 2;
+    text-shadow: #feb47b;
+    font-size: 10px;
+>>>>>>> 3173611 (Resolve merge conflicts)
  }
 header{
     margin-top: 20px;
@@ -68,7 +78,11 @@ header{
 }
 
 .logo:hover{
+<<<<<<< HEAD
     transform: scale(1.1);
+=======
+    transform: scale(1);
+>>>>>>> 3173611 (Resolve merge conflicts)
 }
 
 nav {
